@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["Nacho <ignacio.tomas.95@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.116.1"
+uvicorn = {extras = ["standard"], version = "^0.35.0"}
+python-frontmatter = "^1.1.0"
+markdown = "^3.8.2"
+pyyaml = "^6.0.2"
+
+
+[tool.poetry.group.dev.dependencies]
+numpy = "^2.3.1"
+matplotlib = "^3.10.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

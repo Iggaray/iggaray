@@ -1,0 +1,66 @@
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #181818;
+}
+
+.postList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.postItem {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.postLink {
+  text-decoration: none;
+  color: #181818;
+  transition: color 0.2s;
+}
+
+.postLink:hover {
+  color: #0070f3;
+}
+
+.postTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.3em 0;
+}
+
+.postSummary {
+  color: #222;
+  margin-bottom: 0.5em;
+}
+
+.postMeta {
+  color: #444;
+  font-size: 0.95em;
+}
+
+.tags {
+  margin-left: 1rem;
+}
+
+.tag {
+  background: #f0f0f0;
+  color: #222;
+  border-radius: 6px;
+  padding: 0.2em 0.7em;
+  margin-right: 0.5em;
+  font-size: 0.9em;
+} 
