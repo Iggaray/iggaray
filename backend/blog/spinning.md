@@ -73,7 +73,7 @@ Hence, the only possible movement is a classical uniform rotational motion, wher
 
 More dimensions mean more freedom of movement. In the realm of three dimensions, the position vector could describe many trajectories along the surface of a sphere: a closed circle is not guaranteed at first sight. We should uncover more restrictions if circular movement truly holds.
 
-<img src="http://localhost:8000/static/sphere_sine.png" alt="Sphere allows infinite trajectories." itemprop="contentUrl">
+<img src="/static/sphere_sine.png" alt="Sphere allows infinite trajectories." itemprop="contentUrl">
 
 The fixed length of position means that velocity cannot have a component parallel to it. It must be orthogonal to the position, at all times. Here is a nice analytical proof:
 
@@ -121,7 +121,7 @@ $$
 
 where all vector products are taken on parallel vectors, so they return null vectors. Hence, the entire movement happens on a plane. This plane's intersection with our restricted sphere of radius $|\vec r|$ leads us to the same circular case as in 2D.
 
-<img src="http://localhost:8000/static/sphere_plane_intersection.png" alt="Sphere plane intersection.">
+<img src="/static/sphere_plane_intersection.png" alt="Sphere plane intersection.">
 
 A nice detail is that equation (3) represents the movement of a harmonic oscillator, since $\vec a$ is position’s second derivative:
 
@@ -213,7 +213,7 @@ This trajectory has constant radius, and so do all its infinite derivatives. How
 
 Here I leave a nice 2D projection of this curve. Thanks for reading this far. Have fun!
 
-![alt text](http://localhost:8000/static/lissajous.png)
+![alt text](/static/lissajous.png)
 
 
 ---
