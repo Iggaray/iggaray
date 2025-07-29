@@ -39,64 +39,7 @@ export default function BlogPostPage() {
     }
   }, [slug]);
 
-  if (loading) {
-    return (
-      <main className={styles.container}>
-        <div style={{
-          marginBottom: '2rem',
-          paddingBottom: '1rem',
-          borderBottom: '1px solid #eee',
-          textAlign: 'right',
-          marginRight: '1rem'
-        }}>
-          <div style={{
-            display: 'inline-block',
-            width: '100px',
-            height: '32px',
-            background: '#f0f0f0',
-            borderRadius: '6px',
-            animation: 'pulse 1.5s ease-in-out infinite'
-          }}></div>
-        </div>
-        <div style={{
-          height: '3rem',
-          background: '#f0f0f0',
-          borderRadius: '4px',
-          marginBottom: '1rem',
-          animation: 'pulse 1.5s ease-in-out infinite'
-        }}></div>
-        <div style={{
-          height: '1.5rem',
-          background: '#f0f0f0',
-          borderRadius: '4px',
-          marginBottom: '2rem',
-          width: '40%',
-          animation: 'pulse 1.5s ease-in-out infinite'
-        }}></div>
-        <div style={{
-          height: '1rem',
-          background: '#f0f0f0',
-          borderRadius: '4px',
-          marginBottom: '0.5rem',
-          animation: 'pulse 1.5s ease-in-out infinite'
-        }}></div>
-        <div style={{
-          height: '1rem',
-          background: '#f0f0f0',
-          borderRadius: '4px',
-          marginBottom: '0.5rem',
-          width: '90%',
-          animation: 'pulse 1.5s ease-in-out infinite'
-        }}></div>
-        <style jsx>{`
-          @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-          }
-        `}</style>
-      </main>
-    );
-  }
+  if (loading) return <div></div>;
 
   if (!post) return <div>Post not found.</div>;
 
