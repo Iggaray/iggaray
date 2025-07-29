@@ -50,7 +50,57 @@ export default function HomePage() {
       });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  // Show skeleton while loading
+  if (loading) {
+    return (
+      <main style={{ 
+        maxWidth: 700, 
+        margin: '2rem auto', 
+        padding: '2rem', 
+        background: '#fff', 
+        borderRadius: 12, 
+        boxShadow: '0 2px 16px rgba(0,0,0,0.07)' 
+      }}>
+        <div style={{ 
+          height: '3rem', 
+          background: '#f0f0f0', 
+          borderRadius: '4px', 
+          marginBottom: '1rem',
+          animation: 'pulse 1.5s ease-in-out infinite'
+        }}></div>
+        <div style={{ 
+          height: '1.5rem', 
+          background: '#f0f0f0', 
+          borderRadius: '4px', 
+          marginBottom: '2rem',
+          width: '60%',
+          animation: 'pulse 1.5s ease-in-out infinite'
+        }}></div>
+        <div style={{ 
+          height: '1rem', 
+          background: '#f0f0f0', 
+          borderRadius: '4px', 
+          marginBottom: '0.5rem',
+          animation: 'pulse 1.5s ease-in-out infinite'
+        }}></div>
+        <div style={{ 
+          height: '1rem', 
+          background: '#f0f0f0', 
+          borderRadius: '4px', 
+          marginBottom: '0.5rem',
+          width: '80%',
+          animation: 'pulse 1.5s ease-in-out infinite'
+        }}></div>
+        <style jsx>{`
+          @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+          }
+        `}</style>
+      </main>
+    );
+  }
+
   if (!profile) return <div>Profile not found.</div>;
 
   return (
