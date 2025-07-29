@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import styles from './BlogList.module.css';
 import Link from 'next/link';
+import styles from './BlogList.module.css';
 
 type Post = {
   title: string;
@@ -17,10 +17,16 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Set page title
+    document.title = 'Blog - igaray';
+    
     fetch('/api/posts')
       .then((res) => res.json())
       .then((data) => {
         setPosts(data);
+        setLoading(false);
+      })
+      .catch(() => {
         setLoading(false);
       });
   }, []);
@@ -28,8 +34,7 @@ export default function BlogPage() {
   if (loading) return <div></div>;
 
   return (
-    <main className={styles.container}>
-      {/* Home Button */}
+    <div className={styles.container}>
       <div style={{
         marginBottom: '2rem',
         paddingBottom: '1rem',
@@ -66,11 +71,11 @@ export default function BlogPage() {
           ← Home
         </Link>
       </div>
-
+      
       <h1 className={styles.title}>All posts</h1>
-      <ul className={styles.postList}>
+      <div className={styles.postList}>
         {posts.map((post) => (
-          <li key={post.slug} className={styles.postItem}>
+          <div key={post.slug} className={styles.postItem}>
             <Link href={`/blog/${post.slug}`} className={styles.postLink}>
               <div className={styles.postTitle}>{post.title}</div>
             </Link>
@@ -85,9 +90,9 @@ export default function BlogPage() {
                 </span>
               )}
             </div>
-          </li>
+          </div>
         ))}
-      </ul>
-    </main>
+      </div>
+    </div>
   );
 }

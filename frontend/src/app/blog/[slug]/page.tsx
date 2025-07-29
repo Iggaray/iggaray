@@ -32,6 +32,8 @@ export default function BlogPostPage() {
         .then((data) => {
           setPost(data);
           setLoading(false);
+          // Set page title with post title
+          document.title = `${data.title} - igaray`;
         })
         .catch(() => {
           setLoading(false);
