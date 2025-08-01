@@ -211,9 +211,9 @@ $$
 
 This trajectory has constant radius, and so do all its infinite derivatives. However, it isn't even a closed loop! Not a circle, my friends.
 
-Here I leave a nice 2D projection of this curve. Thanks for reading this far. Have fun!
+Here I leave a nice 3D projected animation of this curve. Thanks for reading this far. Have fun!
 
-![alt text](/static/lissajous.png)
+![alt text](/static/projection.gif)
 
 
 ---
