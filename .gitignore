@@ -322,3 +322,9 @@ logs/
 # Temporary files
 *.tmp
 *.temp 
+
+# Heavy videos
+utils/speed_star_toma_3.mp4
+utils/star_trails.mp4
+utils/coupled_disks_perspective.gif
+utils/coupled_disks_perspective_midpoint.gif
