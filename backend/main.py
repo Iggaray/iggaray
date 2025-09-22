@@ -47,6 +47,9 @@ def list_posts():
     for fname in get_post_files():
         post = parse_post(fname, with_content=False)
         posts.append(post)
+    
+    # Sort posts by date (most recent first)
+    posts.sort(key=lambda x: x.get('date', ''), reverse=True)
     return posts
 
 @app.get("/api/posts/{slug}")
